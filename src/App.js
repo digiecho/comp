@@ -151,14 +151,10 @@ class App extends React.Component {
     this.setState({ reset: true });
     var canvas = document.querySelector("canvas");
     //  var p5 = canvas.getContext("2d");
-    var options = {
-      audioBitsPerSecond: 128000,
-      videoBitsPerSecond: 2500000,
-      mimeType: "video/mp4",
-    };
+
     var video = document.querySelector("video");
     let videoStream = canvas.captureStream(30);
-    let mediaRecorder = new MediaRecorder(videoStream, options);
+    let mediaRecorder = new MediaRecorder(videoStream);
     mediaRecorder.start();
     //setInterval(draw, 300);
     let chunks = [];
@@ -168,7 +164,7 @@ class App extends React.Component {
     };
     setTimeout(function () {
       mediaRecorder.stop();
-    }, 5000);
+    }, 6000);
     mediaRecorder.onstop = function (e) {
       var blob = new Blob(chunks, { type: "video/mp4" });
       // let chunks = [];

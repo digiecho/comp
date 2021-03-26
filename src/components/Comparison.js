@@ -153,7 +153,7 @@ export default function Comparison() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? "Record" : "Next"}
+                    {activeStep === steps.length - 1 ? "Download" : "Next"}
                   </Button>
                 </div>
               </React.Fragment>
