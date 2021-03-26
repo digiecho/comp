@@ -1,6 +1,7 @@
 {
   "name": "redux-essentials-counter-example",
   "version": "0.1.0",
+  "homepage":"https://digiecho.github.io/comp/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "4.11.3",
